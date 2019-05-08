@@ -1,6 +1,6 @@
 # coding: utf8
 
-from kafkaka.bstruct import (
+from geventkafka.bstruct import (
     Struct,
     ShortField, IntField, CharField, UnsignedCharField,
     LongLongField, UnsignedIntField, Crc32Field,
@@ -14,7 +14,7 @@ class KafkaProtocol(object):
     METADATA_KEY = 3
     OFFSET_COMMIT_KEY = 8
     OFFSET_FETCH_KEY = 9
-    CLIENT_ID = 'kafkaka'
+    CLIENT_ID = 'geventkafka'
 
 
 class HeadStruct(Struct):
@@ -218,7 +218,7 @@ if __name__ == "__main__":
             ),
         ]
     )
-    assert produce_msg.pack2bin() == '\x00\x00\x00\x00\x00\x00\x00\x01\x00\x07kafkaka\x00\x01\x00\x00\x03\xe8\x00\x00\x00\x01\x00\x06im-msg\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x1e\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x12Y*G\x87\x00\x00\xff\xff\xff\xff\x00\x00\x00\x04test'
+    assert produce_msg.pack2bin() == '\x00\x00\x00\x00\x00\x00\x00\x01\x00\x07geventkafka\x00\x01\x00\x00\x03\xe8\x00\x00\x00\x01\x00\x06im-msg\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x1e\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x12Y*G\x87\x00\x00\xff\xff\xff\xff\x00\x00\x00\x04test'
     out = ProduceStruct()
     out.unpack(produce_msg.pack2bin())
     print out.dump2nametuple()

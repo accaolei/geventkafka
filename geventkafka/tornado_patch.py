@@ -9,10 +9,10 @@ from collections import deque
 from tornado import iostream
 from tornado import gen
 
-from kafkaka.define import DEFAULT_SOCKET_TIMEOUT_SECONDS, DEFAULT_RETRY_TIMES
-from kafkaka.client import KafkaClient as BaseKafkaClient
-from kafkaka.conn import Connection as BaseConnection
-from kafkaka.define import KafkaError, ConnectionError, TopicError
+from geventkafka.define import DEFAULT_SOCKET_TIMEOUT_SECONDS, DEFAULT_RETRY_TIMES
+from geventkafka.client import KafkaClient as BaseKafkaClient
+from geventkafka.conn import Connection as BaseConnection
+from geventkafka.define import KafkaError, ConnectionError, TopicError
 
 
 logging.basicConfig(

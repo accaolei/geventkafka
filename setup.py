@@ -4,13 +4,10 @@ try:
 except ImportError:
     from distutils.core import setup
 
-setup(name='kafkaka',
+setup(name='geventkafka',
       version='0.5.0',
       description='Kafka Client with smarter protocol described, support for Gevent and tornado',
       long_description=open('README.rst').read(),
-      author='Du Wei',
-      author_email='pandorid@gmail.com',
-      url='https://github.com/wesdu/kafkaka',
       license="Apache License 2.0",
       classifiers=[
         'Intended Audience :: Developers',
@@ -25,7 +22,7 @@ setup(name='kafkaka',
         "Topic :: Software Development :: Libraries :: Python Modules",
       ],
       keywords='Kafka,gevent,tornado,client',
-      packages=['kafkaka'],
-      package_dir={'kafkaka':'kafkaka'},
-      package_data={'kafkaka':['*.*']}, requires=['gevent', 'tornado']
+      packages=['geventkafka'],
+      package_dir={'geventkafka':'geventkafka'},
+      package_data={'geventkafka':['*.*']}, requires=['gevent', 'tornado']
 )

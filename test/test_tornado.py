@@ -6,8 +6,8 @@ from nose.tools import nottest
 from tornado import gen
 from tornado.testing import AsyncTestCase, gen_test
 
-from kafkaka.define import TopicError
-from kafkaka.tornado_patch import KafkaClient
+from geventkafka.define import TopicError
+from geventkafka.tornado_patch import KafkaClient
 from . import mocket
 
 # This unit test was developed in Docker with access to a kafka installation

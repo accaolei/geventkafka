@@ -1,5 +1,5 @@
 # coding: utf8
-from kafkaka.client import KafkaClient
+from geventkafka.client import KafkaClient
 import time
 
 if __name__ == "__main__":

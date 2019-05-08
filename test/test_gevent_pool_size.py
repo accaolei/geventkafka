@@ -1,6 +1,6 @@
 
 # coding: utf8
-from kafkaka.gevent_patch import KafkaClient
+from geventkafka.gevent_patch import KafkaClient
 from gevent import joinall
 from gevent import spawn, sleep
 import gevent

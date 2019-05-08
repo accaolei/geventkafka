@@ -2,9 +2,9 @@
 from gevent import monkey
 from itertools import chain
 import logging
-from kafkaka.client import KafkaClient
-from kafkaka.conn import Connection
-from kafkaka.define import DEFAULT_POOL_SIZE
+from geventkafka.client import KafkaClient
+from geventkafka.conn import Connection
+from geventkafka.define import DEFAULT_POOL_SIZE
 from gevent import spawn
 from gevent.queue import Queue, Full
 import socket

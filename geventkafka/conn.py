@@ -3,8 +3,8 @@
 import logging
 import socket
 import struct
-from kafkaka.define import ConnectionError
-from kafkaka.define import DEFAULT_KAFKA_PORT, DEFAULT_SOCKET_TIMEOUT_SECONDS
+from geventkafka.define import ConnectionError
+from geventkafka.define import DEFAULT_KAFKA_PORT, DEFAULT_SOCKET_TIMEOUT_SECONDS
 
 log = logging.getLogger("kafka")
 

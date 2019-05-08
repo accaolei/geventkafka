@@ -1,19 +1,19 @@
 # coding: utf8
 import itertools
-from kafkaka.define import (
+from geventkafka.define import (
     DEFAULT_SOCKET_TIMEOUT_SECONDS,
     DEFAULT_KAFKA_PORT,
     DEFAULT_RETRY_TIMES,
 )
-from kafkaka.define import (
+from geventkafka.define import (
     KafkaError,
     ConnectionError,
     LeaderNotAvailable,
     UnknownTopicOrPartition,
     check_and_raise_error,
 )
-from kafkaka.conn import Connection as KafkaConnection
-from kafkaka.protocol import (
+from geventkafka.conn import Connection as KafkaConnection
+from geventkafka.protocol import (
     MetaStruct,
     MetaResponseStruct,
     ProduceStruct,
@@ -39,7 +39,7 @@ def initial_hosts(hosts):
 
 
 class KafkaClient(object):
-    CLIENT_ID = b"kafkaka"
+    CLIENT_ID = b"geventkafka"
     CORRELATION_SEED = itertools.count()
 
     def __init__(self,
